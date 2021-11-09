@@ -15,7 +15,8 @@
         "prettier": "prettier --check src public",
         "prettier:fix": "prettier --write src public",
         "update": "npx npm-check-updates --doctor --upgrade && npm audit fix && npm dedup",
-        "plugin": "npm run build && http-server ./dist -p 3000 -c-1 --cors"
+        "watch": "TS_NODE_PROJECT=webpack.tsconfig.json webpack --mode production --watch",
+        "plugin": "http-server ./dist -p 3000 -c-1 --cors"
     },
     "devDependencies": {
         "@apollo/client": "^3.4.16",
@@ -25,8 +26,7 @@
         "@babel/preset-typescript": "^7.15.0",
         "@kubernetes/client-node": "^0.15.1",
         "@open-cluster-management/ui-components": "^1.23.0",
-        "@openshift-console/dynamic-plugin-sdk": "0.0.2-wp5",
-        "@openshift-console/dynamic-plugin-sdk-webpack": "0.0.2-wp5",
+        "@openshift-console/dynamic-plugin-sdk-webpack": "0.0.3",
         "@patternfly/react-code-editor": "^4.3.42",
         "@patternfly/react-core": "^4.152.4",
         "@patternfly/react-icons": "^4.11.14",
@@ -209,7 +209,7 @@
         "description": "Cluster management",
         "exposedModules": {
             "perspective": "./src/perspective",
-            "test": "./src/routes/Credentials/Test.tsx"
+            "credentials": "./src/routes/Credentials/CredentialsPlugin.tsx"
         },
         "dependencies": {
             "@console/pluginAPI": "*"

@@ -31,7 +31,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/home/welcome",
-            "component": { "$codeRef": "test.default" }
+            "component": { "$codeRef": "credentials.default" }
         }
     },
     {
@@ -48,7 +48,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/home/overview",
-            "component": { "$codeRef": "test.default" }
+            "component": { "$codeRef": "credentials.default" }
         }
     },
     {
@@ -73,7 +73,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/infrastructure/clusters",
-            "component": { "$codeRef": "test.default" }
+            "component": { "$codeRef": "credentials.default" }
         }
     },
     {
@@ -90,7 +90,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/infrastructure/bare-metal-assets",
-            "component": { "$codeRef": "test.default" }
+            "component": { "$codeRef": "credentials.default" }
         }
     },
     {
@@ -107,7 +107,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/infrastructure/automation",
-            "component": { "$codeRef": "test.default" }
+            "component": { "$codeRef": "credentials.default" }
         }
     },
     {
@@ -124,7 +124,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/infrastructure/environments",
-            "component": { "$codeRef": "test.default" }
+            "component": { "$codeRef": "credentials.default" }
         }
     },
     {
@@ -140,7 +140,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/applications",
-            "component": { "$codeRef": "test.default" }
+            "component": { "$codeRef": "credentials.default" }
         }
     },
     {
@@ -156,7 +156,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/governance",
-            "component": { "$codeRef": "test.default" }
+            "component": { "$codeRef": "credentials.default" }
         }
     },
     {
@@ -172,7 +172,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/credentials",
-            "component": { "$codeRef": "test.default" }
+            "component": { "$codeRef": "credentials.default" }
         }
     }
 ]
