@@ -24,13 +24,13 @@
             "section": "acm-home",
             "id": "acm-welcome",
             "name": "Welcome",
-            "href": "/acm/home/welcome"
+            "href": "/multicloud/home/welcome"
         }
     },
     {
         "type": "console.page/route",
         "properties": {
-            "path": "/acm/home/welcome",
+            "path": "/multicloud/home/welcome",
             "component": { "$codeRef": "welcome.default" }
         }
     },
@@ -41,13 +41,13 @@
             "section": "acm-home",
             "id": "acm-overview",
             "name": "Overview",
-            "href": "/acm/home/overview"
+            "href": "/multicloud/home/overview"
         }
     },
     {
         "type": "console.page/route",
         "properties": {
-            "path": "/acm/home/overview",
+            "path": "/multicloud/home/overview",
             "component": { "$codeRef": "credentials.default" }
         }
     },
@@ -66,13 +66,13 @@
             "section": "acm-infrastructure",
             "id": "acm-clusters",
             "name": "Clusters",
-            "href": "/acm/infrastructure/clusters"
+            "href": "/multicloud/infrastructure/clusters"
         }
     },
     {
         "type": "console.page/route",
         "properties": {
-            "path": "/acm/infrastructure/clusters",
+            "path": "/multicloud/infrastructure/clusters",
             "component": { "$codeRef": "credentials.default" }
         }
     },
@@ -83,13 +83,13 @@
             "section": "acm-infrastructure",
             "id": "acm-bare-metal-assets",
             "name": "Bare metal assets",
-            "href": "/acm/infrastructure/bare-metal-assets"
+            "href": "/multicloud/infrastructure/bare-metal-assets"
         }
     },
     {
         "type": "console.page/route",
         "properties": {
-            "path": "/acm/infrastructure/bare-metal-assets",
+            "path": "/multicloud/infrastructure/bare-metal-assets",
             "component": { "$codeRef": "credentials.default" }
         }
     },
@@ -100,13 +100,13 @@
             "section": "acm-infrastructure",
             "id": "acm-automation",
             "name": "Automation",
-            "href": "/acm/infrastructure/automation"
+            "href": "/multicloud/infrastructure/automation"
         }
     },
     {
         "type": "console.page/route",
         "properties": {
-            "path": "/acm/infrastructure/automation",
+            "path": "/multicloud/infrastructure/automation",
             "component": { "$codeRef": "credentials.default" }
         }
     },
@@ -117,13 +117,13 @@
             "section": "acm-infrastructure",
             "id": "acm-infrastructure-environments",
             "name": "Infrastructure environments",
-            "href": "/acm/infrastructure/environments"
+            "href": "/multicloud/infrastructure/environments"
         }
     },
     {
         "type": "console.page/route",
         "properties": {
-            "path": "/acm/infrastructure/environments",
+            "path": "/multicloud/infrastructure/environments",
             "component": { "$codeRef": "credentials.default" }
         }
     },
@@ -133,13 +133,13 @@
             "perspective": "acm",
             "id": "acm-applications",
             "name": "Applications",
-            "href": "/acm/applications"
+            "href": "/multicloud/applications"
         }
     },
     {
         "type": "console.page/route",
         "properties": {
-            "path": "/acm/applications",
+            "path": "/multicloud/applications",
             "component": { "$codeRef": "credentials.default" }
         }
     },
@@ -149,13 +149,13 @@
             "perspective": "acm",
             "id": "acm-governance",
             "name": "Governance",
-            "href": "/acm/governance"
+            "href": "/multicloud/governance"
         }
     },
     {
         "type": "console.page/route",
         "properties": {
-            "path": "/acm/governance",
+            "path": "/multicloud/governance",
             "component": { "$codeRef": "credentials.default" }
         }
     },
@@ -165,13 +165,13 @@
             "perspective": "acm",
             "id": "acm-credentials",
             "name": "Credentials",
-            "href": "/acm/credentials"
+            "href": "/multicloud/credentials"
         }
     },
     {
         "type": "console.page/route",
         "properties": {
-            "path": "/acm/credentials",
+            "path": "/multicloud/credentials",
             "component": { "$codeRef": "credentials.default" }
         }
     }

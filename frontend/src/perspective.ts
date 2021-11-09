@@ -3,6 +3,6 @@ import { ClusterIcon } from '@patternfly/react-icons'
 
 export const icon = { default: ClusterIcon }
 
-export const getLandingPageURL = () => '/acm/home/welcome'
+export const getLandingPageURL = () => '/multicloud/home/welcome'
 
 export const getImportRedirectURL = (namespace: string) => `/k8s/cluster/projects/${namespace}/workloads`

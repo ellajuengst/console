@@ -16,7 +16,7 @@
         "prettier:fix": "prettier --write src public",
         "update": "npx npm-check-updates --doctor --upgrade && npm audit fix && npm dedup",
         "watch": "TS_NODE_PROJECT=webpack.tsconfig.json webpack --mode production --watch",
-        "plugin": "http-server ./dist -p 3000 -c-1 --cors"
+        "plugin": "npx http-server ./dist -p 3000 -c-1 --cors"
     },
     "devDependencies": {
         "@apollo/client": "^3.4.16",
