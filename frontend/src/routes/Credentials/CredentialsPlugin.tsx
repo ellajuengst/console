@@ -2,7 +2,7 @@
 import { RecoilRoot } from 'recoil'
 import CredentialsPage from './Credentials'
 
-export default function Test() {
+export default function CredentialsPlugin() {
     return (
         <RecoilRoot>
             <CredentialsPage />

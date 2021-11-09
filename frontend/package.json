@@ -209,6 +209,7 @@
         "description": "Cluster management",
         "exposedModules": {
             "perspective": "./src/perspective",
+            "welcome": "./src/routes/Home/Welcome/Welcome.tsx",
             "credentials": "./src/routes/Credentials/CredentialsPlugin.tsx"
         },
         "dependencies": {

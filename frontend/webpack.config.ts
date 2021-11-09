@@ -17,7 +17,7 @@ module.exports = function (_env: any, argv: { hot?: boolean; mode: string | unde
     const isDevelopment = !isProduction
 
     const config: webpack.Configuration & { devServer: DevServerConfiguration } = {
-        entry: './src/routes/Credentials/Test.tsx',
+        entry: './src/routes/Home/Welcome/Welcome.tsx',
         resolve: {
             extensions: ['.ts', '.tsx', '.js', '.jsx'],
             fallback: {
