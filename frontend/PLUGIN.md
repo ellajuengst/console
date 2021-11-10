@@ -3,8 +3,11 @@
 Start ocp console bridge with plugin and proxy
 
 ```
-./bin/bridge -plugins acm-plugin=http://localhost:3000 
---plugin-proxy='{"services":[{"multicloudAPIPath":"/api/proxy/namespace/open-cluster-management/service/serviceName:9991/","endpoint":"https://localhost:4000"}]}'
+source ./contrib/oc-environment.sh 
+```
+
+```
+./bin/bridge -plugins acm-plugin=http://localhost:3000 --plugin-proxy='{"services":[{"consoleAPIPath":"/api/proxy/namespace/open-cluster-management/service/serviceName:9991/","endpoint":"https://localhost:4000"}]}'
 ```
 
 ```

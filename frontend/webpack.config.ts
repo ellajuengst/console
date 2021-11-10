@@ -64,7 +64,9 @@ module.exports = function (_env: any, argv: { hot?: boolean; mode: string | unde
                 'process.env.REACT_APP_BACKEND_HOST': isProduction
                     ? JSON.stringify('')
                     : JSON.stringify('https://localhost:4000'),
-                'process.env.REACT_APP_BACKEND_PATH': JSON.stringify('/multicloud'),
+                'process.env.REACT_APP_BACKEND_PATH': JSON.stringify(
+                    '/api/proxy/namespace/open-cluster-management/service/serviceName:9991/multicloud'
+                ),
             }) as unknown as webpack.WebpackPluginInstance,
             new webpack.ProvidePlugin({ Buffer: ['buffer', 'Buffer'], process: 'process' }),
             new MonacoWebpackPlugin({ languages: ['yaml'] }),
