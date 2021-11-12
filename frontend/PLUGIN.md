@@ -1,6 +1,16 @@
 # Dynamic Plugin
 
-## OCP Console Bridge
+## OCP Console
+
+Checkout <https://github.com/openshift/console>
+
+### Running OCP Console in development mode
+
+Build OCP Console
+
+```
+./build.sh
+```
 
 Start ocp console bridge with plugin and proxy
 
@@ -15,9 +25,7 @@ source ./contrib/oc-environment.sh
 Bridge variables can also be passes in as environment variables
 
 ```
-
 BRIDGE_PLUGIN_PROXY='{"services":[{"consoleAPIPath":"/api/proxy/namespace/open-cluster-management/service/serviceName:9991/","endpoint":"https://localhost:4000","authorize":true}]}'
-
 ```
 
 ## Dynamic Plugin support for getting resources
