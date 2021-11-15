@@ -1,6 +1,5 @@
 /* Copyright Contributors to the Open Cluster Management project */
 
-import { deleteResource, DiscoveryConfig, ProviderConnection, Secret, unpackProviderConnection } from '../../resources'
 import {
     AcmButton,
     AcmEmptyState,
@@ -26,16 +25,17 @@ import { BulkActionModel, IBulkActionModelProps } from '../../components/BulkAct
 import { RbacDropdown } from '../../components/Rbac'
 import { rbacDelete, rbacPatch } from '../../lib/rbac-util'
 import { NavigationPath } from '../../NavigationPath'
+import { deleteResource, DiscoveryConfig, ProviderConnection, Secret, unpackProviderConnection } from '../../resources'
 
 export default function CredentialsPage() {
-    const { t } = useTranslation(['credentials'])
+    const { t } = useTranslation(['plugin__acm-plugin'])
     const [secrets] = useRecoilState(secretsState)
     const providerConnections = secrets.map(unpackProviderConnection)
     const [discoveryConfigs] = useRecoilState(discoveryConfigState)
     const [, setRoute] = useRecoilState(acmRouteState)
     useEffect(() => setRoute(AcmRoute.Credentials), [setRoute])
     return (
-        <AcmPage header={<AcmPageHeader title={t('credentialsPage.title')} />}>
+        <AcmPage header={<AcmPageHeader title={t('Credentials')} />}>
             <AcmPageContent id="credentials">
                 <PageSection>
                     <CredentialsTable
@@ -52,10 +52,10 @@ export default function CredentialsPage() {
 // Ingoring coverage since this will move one the console header navigation is done
 /* istanbul ignore next */
 const AddConnectionBtn = () => {
-    const { t } = useTranslation(['credentials'])
+    const { t } = useTranslation([])
     return (
         <AcmButton component={Link} to={NavigationPath.addCredentials}>
-            {t('credentials.tableAction.add')}
+            {t('Add credential')}
         </AcmButton>
     )
 }
@@ -129,7 +129,7 @@ export function CredentialsTable(props: {
                 items={props.secrets}
                 columns={[
                     {
-                        header: t('credentials.tableHeader.name'),
+                        header: t('Name'),
                         sort: 'metadata.name',
                         search: 'metadata.name',
                         cell: (secret) => (
@@ -145,7 +145,7 @@ export function CredentialsTable(props: {
                         ),
                     },
                     {
-                        header: t('credentials.tableHeader.type'),
+                        header: t('Type'),
                         sort: /* istanbul ignore next */ (a: Secret, b: Secret) => {
                             return compareStrings(
                                 getProviderName(a.metadata?.labels),
@@ -162,13 +162,13 @@ export function CredentialsTable(props: {
                         },
                     },
                     {
-                        header: t('credentials.tableHeader.namespace'),
+                        header: t('Namespace'),
                         sort: 'metadata.namespace',
                         search: 'metadata.namespace',
                         cell: 'metadata.namespace',
                     },
                     {
-                        header: t('credentials.tableHeader.additionalActions'),
+                        header: t('Actions'),
                         search: (item: Secret) => {
                             return getAdditionalActions(item)
                         },
@@ -178,14 +178,12 @@ export function CredentialsTable(props: {
                                 if (CredentialIsInUseByDiscovery(item)) {
                                     return (
                                         <Link to={NavigationPath.configureDiscovery}>
-                                            {t('credentials.additionalActions.editClusterDiscovery')}
+                                            {t('Configure cluster discovery')}
                                         </Link>
                                     )
                                 } else {
                                     return (
-                                        <Link to={NavigationPath.createDiscovery}>
-                                            {t('credentials.additionalActions.enableClusterDiscovery')}
-                                        </Link>
+                                        <Link to={NavigationPath.createDiscovery}>{t('Create cluster discovery')}</Link>
                                     )
                                 }
                             } else {
@@ -197,7 +195,7 @@ export function CredentialsTable(props: {
                         },
                     },
                     {
-                        header: t('credentials.tableHeader.created'),
+                        header: t('Created'),
                         sort: 'metadata.creationTimestamp',
                         cell: (resource) => (
                             <span style={{ whiteSpace: 'nowrap' }}>
@@ -275,7 +273,7 @@ export function CredentialsTable(props: {
                 tableActionButtons={[
                     {
                         id: 'add',
-                        title: t('credentials.tableAction.add'),
+                        title: t('Add credential'),
                         click: () => {
                             history.push(NavigationPath.addCredentials)
                         },
@@ -285,7 +283,7 @@ export function CredentialsTable(props: {
                 tableActions={[
                     {
                         id: 'deleteConnection',
-                        title: t('credentials.tableAction.deleteMultiple'),
+                        title: t('Delete credentials'),
                         click: (secrets: Secret[]) => {
                             setModalProps({
                                 open: true,
